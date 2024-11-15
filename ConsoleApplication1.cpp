@@ -2,11 +2,48 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    char operation;
+    double num1, num2;
+
+    cout << "Enter operation (+, -, *, /): ";
+    cin >> operation;
+
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    switch (operation) {
+    case '+':
+        cout << "Result: " << (num1 + num2) << endl;
+        break;
+    case '-':
+        cout << "Result: " << (num1 - num2) << endl;
+        break;
+    case '*':
+        cout << "Result: " << (num1 * num2) << endl;
+        break;
+    case '/':
+        if (num2 != 0)
+            cout << "Result: " << (num1 / num2) << endl;
+        else
+            cout << "Error: Division by zero!" << endl;
+        break;
+    default:
+        cout << "Invalid operation!" << endl;
+    }
+
+    return 0;
 }
+
+
+//#include <iostream>
+
+//int main()
+//{
+   // std::cout << "Hello World!\n";
+//}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
